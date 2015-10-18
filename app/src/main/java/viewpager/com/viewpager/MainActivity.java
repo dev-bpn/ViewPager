@@ -66,4 +66,13 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        if(viewPager.getCurrentItem() == 0){
+        super.onBackPressed();
+        }else {
+            MainActivity.getViewPagerAtCurrentPosition(0);
+        }
+    }
 }
