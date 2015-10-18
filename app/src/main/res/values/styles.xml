@@ -3,4 +3,8 @@
     <style name="AppTheme" parent="AppTheme.Base" />
     <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar" />
 
+    <style name="CustomToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/primary_light</item>
+        <item name="android:textColorSecondary">@color/icons</item>
+    </style>
 </resources>
