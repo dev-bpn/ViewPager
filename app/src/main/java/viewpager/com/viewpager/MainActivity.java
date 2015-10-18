@@ -1,6 +1,7 @@
 package viewpager.com.viewpager;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -10,11 +11,21 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initializeToolbar();
+        initializeVariables();
+    }
+
+    private void initializeVariables(){
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+    }
+
+    private void initializeViewPager(){
+
     }
 
     private void initializeToolbar(){
