@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     }
 
     private void setViewPagerAdapter(){
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4));
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4 , this));
         getViewPagerAtCurrentPosition(0);
     }
 

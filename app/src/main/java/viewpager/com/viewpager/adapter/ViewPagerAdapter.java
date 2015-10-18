@@ -1,9 +1,11 @@
 package viewpager.com.viewpager.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import viewpager.com.viewpager.R;
 import viewpager.com.viewpager.fragment.Fragment_A;
 import viewpager.com.viewpager.fragment.Fragment_B;
 import viewpager.com.viewpager.fragment.Fragment_C;
@@ -15,10 +17,12 @@ import viewpager.com.viewpager.fragment.Fragment_E;
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
+    Context context;
     private int count;
-    public ViewPagerAdapter(FragmentManager fm , int count) {
+    public ViewPagerAdapter(FragmentManager fm , int count , Context context) {
         super(fm);
         this.count = count;
+        this.context = context;
     }
 
     @Override
@@ -43,5 +47,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return count;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return context.getResources().getStringArray(R.array.tabs)[position];
     }
 }
