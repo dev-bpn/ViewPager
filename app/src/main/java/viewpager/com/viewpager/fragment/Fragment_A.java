@@ -16,7 +16,7 @@ import viewpager.com.viewpager.R;
  */
 public class Fragment_A extends Fragment {
 
-    private String[] names = {"name for fragment 1" , "name for fragment 2"};
+    private String[] names = {"name for fragment 1" , "name for fragment 2" , "name for fragment 3" , "name for fragment 4" , "name for fragment 5"};
     private static ListView listView;
     public Fragment_A() {
     }

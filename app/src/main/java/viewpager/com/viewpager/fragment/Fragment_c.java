@@ -13,24 +13,27 @@ import viewpager.com.viewpager.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_B extends Fragment {
+public class Fragment_C extends Fragment {
 
     private TextView textView;
-    public Fragment_B() {
+    public Fragment_C() {
+        // Required empty public constructor
     }
 
-    public static Fragment_B newInstance(){
-        Fragment_B fragment_b = new Fragment_B();
-        return fragment_b;
+    public static Fragment_C newInstance(){
+        Fragment_C fragment_c = new Fragment_C();
+        return fragment_c;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View layout = inflater.inflate(R.layout.fragment_b, container, false);
-        textView = (TextView) layout.findViewById(R.id.text_view_fragb);
-        textView.setText(Fragment_A.getItemData(1).toString());
+        View layout = inflater.inflate(R.layout.fragment_c, container, false);
+        textView = (TextView) layout.findViewById(R.id.text_view_fragc);
+        textView.setText(Fragment_A.getItemData(2).toString());
         return layout;
     }
+
+
 }

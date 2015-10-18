@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void setViewPagerAdapter(){
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 2));
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4));
     }
 
     private void initializeToolbar(){
