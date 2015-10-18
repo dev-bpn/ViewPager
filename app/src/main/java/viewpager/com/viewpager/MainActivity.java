@@ -36,6 +36,12 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     private void setViewPagerAdapter(){
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4 , this));
         getViewPagerAtCurrentPosition(0);
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+            @Override
+            public void onPageSelected(int position) {
+                materialTabHost.setSelectedNavigationItem(position);
+            }
+        });
     }
 
     public static void getViewPagerAtCurrentPosition(int position){
@@ -85,7 +91,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
     @Override
     public void onTabSelected(MaterialTab materialTab) {
-
+        viewPager.setCurrentItem(materialTab.getPosition());
     }
 
     @Override
