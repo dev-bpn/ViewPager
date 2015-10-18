@@ -2,12 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
     <include
         android:id="@+id/app_toolbar"
         layout="@layout/app_toolbar"/>
+
+    <it.neokree.materialtabs.MaterialTabHost
+        android:id="@+id/materialTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:textColor="#FFFFFF"
+        app:primaryColor="#3F51B5"
+        app:accentColor="#448AFF" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"

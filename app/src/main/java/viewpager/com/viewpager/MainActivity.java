@@ -8,12 +8,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import it.neokree.materialtabs.MaterialTabHost;
 import viewpager.com.viewpager.adapter.ViewPagerAdapter;
 
 public class MainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;
-    public static ViewPager viewPager;
+    private static ViewPager viewPager;
+    private MaterialTabHost materialTabHost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void initializeVariables(){
         viewPager = (ViewPager) findViewById(R.id.viewPager);
+        materialTabHost = (MaterialTabHost) findViewById(R.id.materialTabHost);
     }
 
     private void setViewPagerAdapter(){
