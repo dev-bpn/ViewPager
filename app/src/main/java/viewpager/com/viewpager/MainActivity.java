@@ -13,7 +13,7 @@ import viewpager.com.viewpager.adapter.ViewPagerAdapter;
 public class MainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;
-    private ViewPager viewPager;
+    public static ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,11 @@ public class MainActivity extends ActionBarActivity {
 
     private void setViewPagerAdapter(){
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4));
+        getViewPagerAtCurrentPosition(0);
+    }
+
+    public static void getViewPagerAtCurrentPosition(int position){
+        viewPager.setCurrentItem(position);
     }
 
     private void initializeToolbar(){
