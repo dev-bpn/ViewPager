@@ -8,10 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
+import it.neokree.materialtabs.MaterialTabListener;
 import viewpager.com.viewpager.adapter.ViewPagerAdapter;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements MaterialTabListener{
 
     private Toolbar toolbar;
     private static ViewPager viewPager;
@@ -78,5 +80,21 @@ public class MainActivity extends ActionBarActivity {
         }else {
             MainActivity.getViewPagerAtCurrentPosition(0);
         }
+    }
+
+
+    @Override
+    public void onTabSelected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabReselected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabUnselected(MaterialTab materialTab) {
+
     }
 }
