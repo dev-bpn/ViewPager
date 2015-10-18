@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import viewpager.com.viewpager.adapter.ViewPagerAdapter;
+
 public class MainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;
@@ -18,14 +20,15 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         initializeToolbar();
         initializeVariables();
+        setViewPagerAdapter();
     }
 
     private void initializeVariables(){
         viewPager = (ViewPager) findViewById(R.id.viewPager);
     }
 
-    private void initializeViewPager(){
-
+    private void setViewPagerAdapter(){
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 2));
     }
 
     private void initializeToolbar(){
