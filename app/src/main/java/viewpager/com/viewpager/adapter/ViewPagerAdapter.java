@@ -1,6 +1,7 @@
 package viewpager.com.viewpager.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -16,6 +17,9 @@ import viewpager.com.viewpager.fragment.Fragment_E;
  * Created by Dell on 10/18/2015.
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+
+    private int[] icons = {R.drawable.ic_action_refresh , R.drawable.ic_action_send_now , R.drawable.ic_action_settings ,
+            R.drawable.ic_action_refresh };
 
     Context context;
     private int count;
@@ -52,5 +56,9 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         return context.getResources().getStringArray(R.array.tabs)[position];
+    }
+
+    public Drawable getIcons(int position){
+        return context.getResources().getDrawable(icons[position]);
     }
 }

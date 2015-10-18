@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         for(int i = 0 ; i < adapter.getCount() ; i++){
             materialTabHost.addTab(
                     materialTabHost.newTab()
-                    .setText(adapter.getPageTitle(i))
+                    .setIcon(adapter.getIcons(i))
                     .setTabListener(this));
 
         }
