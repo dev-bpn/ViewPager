@@ -34,7 +34,8 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     }
 
     private void setViewPagerAdapter(){
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager() , 4 , this));
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), 4, this);
+        viewPager.setAdapter(adapter);
         getViewPagerAtCurrentPosition(0);
         viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
             @Override
@@ -42,6 +43,14 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
                 materialTabHost.setSelectedNavigationItem(position);
             }
         });
+
+        for(int i = 0 ; i < adapter.getCount() ; i++){
+            materialTabHost.addTab(
+                    materialTabHost.newTab()
+                    .setText(adapter.getPageTitle(i))
+                    .setTabListener(this));
+
+        }
     }
 
     public static void getViewPagerAtCurrentPosition(int position){
