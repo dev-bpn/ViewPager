@@ -39,16 +39,16 @@ public class Fragment_A extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 switch (position) {
                     case 0:
-                        MainActivity.getViewPagerAtCurrentPosition(2);
+                        MainActivity.getViewPagerAtCurrentPosition(1);
                         break;
                     case 1:
-                        MainActivity.getViewPagerAtCurrentPosition(3);
+                        MainActivity.getViewPagerAtCurrentPosition(2);
                         break;
                     case 2:
-                        MainActivity.getViewPagerAtCurrentPosition(4);
+                        MainActivity.getViewPagerAtCurrentPosition(3);
                         break;
                     case 3:
-
+                        MainActivity.getViewPagerAtCurrentPosition(4);
                         break;
                 }
             }
