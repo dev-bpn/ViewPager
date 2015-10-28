@@ -2,7 +2,7 @@
     <string name="app_name">ViewPager</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">ListView Child Scroll</string>
     <string name="refresh">Refresh</string>
     <string name="action_share">Share</string>
 
@@ -14,4 +14,5 @@
         <item>TAB_3</item>
         <item>TAB_4</item>
     </string-array>
+    <string name="title_activity_activity_2">Activity_2</string>
 </resources>

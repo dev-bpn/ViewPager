@@ -1,5 +1,6 @@
 package viewpager.com.viewpager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -79,6 +80,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Toast.makeText(this , "Setting" , Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, Activity_2.class));
         }else if(id == R.id.action_share){
             Toast.makeText(this , "Share" , Toast.LENGTH_LONG).show();
         }else if(id == R.id.action_refresh){
