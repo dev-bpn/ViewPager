@@ -23,7 +23,7 @@ public class MyPersistentSEARCH {
         for (int x = 0; x < 10; x++) {
             String[] names = {"aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd"};
             SearchResult option = new SearchResult(names[x], context.getResources().getDrawable(
-                    R.drawable.ic_action_settings));
+                    R.mipmap.ic_launcher));
             searchBox.addSearchable(option);
         }
 
