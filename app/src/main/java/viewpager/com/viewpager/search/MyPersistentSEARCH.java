@@ -17,7 +17,7 @@ public class MyPersistentSEARCH {
 
     public static void openSearch(final SearchBox searchBox  , final Context context , final Toolbar toolbar) {
 
-        String[] names = {"aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd" , "aaa" , "sss" , "ddd"};
+        String[] names = context.getResources().getStringArray(R.array.city_name);
         toolbar.setTitle("");
         searchBox.revealFromMenuItem(R.id.action_search, (Activity) context);
         for (int x = 0; x < 10; x++) {
@@ -46,7 +46,7 @@ public class MyPersistentSEARCH {
             @Override
             public void onResultClick(SearchResult result) {
                 String resString = result.toString();
-
+                onSearchItemClick(resString);
             }
 
             @Override
@@ -60,13 +60,13 @@ public class MyPersistentSEARCH {
         if(searchBox.getSearchText().isEmpty())toolbar.setTitle("");
     }
 
-    private void onSearchItemClick(String result){
+    private static void onSearchItemClick(String result){
 
-        if(result.equals("aaa")){
+        if(result.equals("TAB_1")){
             MainActivity.getViewPagerAtCurrentPosition(1);
-        }else if(result.equals("sss")){
+        }else if(result.equals("TAB_2")){
             MainActivity.getViewPagerAtCurrentPosition(2);
-        }else if(result.equals("ddd")){
+        }else if(result.equals("TAB_3")){
             MainActivity.getViewPagerAtCurrentPosition(3);
         }
 

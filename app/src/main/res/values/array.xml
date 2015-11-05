@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="city_name">
+        <item>TAB_1</item>
+        <item>TAB_2</item>
+        <item>TAB_3</item>
+        <item>TAB_4</item>
+        <item>TAB_1</item>
+        <item>TAB_2</item>
+        <item>TAB_3</item>
+        <item>TAB_4</item>
+        <item>TAB_1</item>
+        <item>TAB_2</item>
+        <item>TAB_3</item>
+        <item>TAB_4</item>
+    </string-array>
+
+</resources>
