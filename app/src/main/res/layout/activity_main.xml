@@ -10,6 +10,13 @@
         android:id="@+id/app_toolbar"
         layout="@layout/app_toolbar"/>
 
+    <com.quinny898.library.persistentsearch.SearchBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_box"
+        android:visibility="gone"
+        />
+
     <it.neokree.materialtabs.MaterialTabHost
         android:id="@+id/materialTabHost"
         android:layout_width="match_parent"

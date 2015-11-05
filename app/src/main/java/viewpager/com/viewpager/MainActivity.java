@@ -12,17 +12,21 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import com.quinny898.library.persistentsearch.SearchBox;
+
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
 import viewpager.com.viewpager.adapter.ViewPagerAdapter;
 import viewpager.com.viewpager.search.ArrayAdapterSearchView;
+import viewpager.com.viewpager.search.MyPersistentSEARCH;
 
 public class MainActivity extends ActionBarActivity implements MaterialTabListener{
 
     private Toolbar toolbar;
     private static ViewPager viewPager;
     private MaterialTabHost materialTabHost;
+    private SearchBox searchBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +35,20 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
         initializeToolbar();
         initializeVariables();
         setViewPagerAdapter();
+
     }
 
     private void initializeVariables(){
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         materialTabHost = (MaterialTabHost) findViewById(R.id.materialTabHost);
+        searchBox = (SearchBox) findViewById(R.id.search_box);
     }
 
     private void setViewPagerAdapter(){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), 4, this);
         viewPager.setAdapter(adapter);
         getViewPagerAtCurrentPosition(0);
-        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(){
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
                 materialTabHost.setSelectedNavigationItem(position);
@@ -112,6 +118,7 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
 
         }else if(id == R.id.action_refresh){
             Toast.makeText(this , "Refresh" , Toast.LENGTH_LONG).show();
+            MyPersistentSEARCH.openSearch(searchBox , this , toolbar);
         }
 
         return super.onOptionsItemSelected(item);

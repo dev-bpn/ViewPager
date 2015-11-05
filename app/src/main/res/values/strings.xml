@@ -3,7 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">ListView Child Scroll</string>
-    <string name="refresh">Refresh</string>
+    <string name="refresh">Persistent Search</string>
     <string name="action_share">AutoComplete Search</string>
 
 <!-- TODO: Remove or change this placeholder text -->
